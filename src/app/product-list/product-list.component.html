@@ -3,4 +3,8 @@
     <h5><a href="#" [title]="product.name + ' details' ">{{product.name}}</a></h5>
     <p *ngIf="product.description"><strong>Description:</strong> {{product.description}}</p>
     <button (click)="share()">Share</button>
+
+    <app-product-alerts [product] = "product" (notify)="onNotify()" >
+        
+    </app-product-alerts>
 </div>
